@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vectores</title>
+    <style>
+        table th{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Forma</th>
+            <th>Precio</th>
+        </tr>
+        <tr>
+            <th id="nombre1"></th>
+            <th id="forma1"></th>
+            <th id="precio1"></th>
+        </tr>
+    </table>
+    <button id="miBt">Crear tabla</button>
+    <script>
+        console.log("HOLA")
+        const frutas = ["manzana","naranja","platano","fresa","sandria"]
+
+        console.log(frutas)
+        console.log("Numeros de elementos", frutas.length)
+        //con el .length, podemos ver cuantos elementos hay en este variable
+
+        console.log(frutas[1])
+        //con el variable[numero de la lista], podemos elegir el elemento que queremos
+
+        console.log[frutas.length-1]
+
+
+        for (let i = 0;i<frutas.length;i++){
+            console.log(frutas[i])
+        }
+
+
+        //-----------------------------
+
+        const persona = [
+            ["Miquel","Angel"],
+            ["Juan","Nada"],
+            ["Manuel","Talia"]
+        ];
+
+        //console.log(persona[0][0],persona[0][1])
+
+        for (let i=0;i<persona.length;i++){
+            console.log(persona[i][0],persona[i][1])
+        }
+
+        //------------------------------
+
+        const game = [
+            ["Juego1","RPG","39,99€"],
+            ["Juego2","MOBA","10,99€"],
+            ["Juego3","FPS","17,89€"],
+            ["Juego4","FPS","40,99€"]
+        ]
+
+        for (let i=0;i<game.length;i++){
+            console.log("Nombre del juego: " + game[i][0] + ", " + "FORMA: " + game[i][1] + ", " + "Precio: " + game[i][2])
+        }
+
+        let miBtN = document.querySelector("#miBt")
+        console.log(miBtN)
+
+        let miN = document.querySelector("#nombre1")
+        let miF = document.querySelector("#forma1")
+        let miP = document.querySelector("#precio1")
+
+        miBtN.addEventListener("click", tabla2)
+
+        function tabla2(){
+            let Nom = game[0][0]
+            let For = game[0][1]
+            let Pre = game[0][2]
+            miN.innerHTML = Nom
+            miF.innerHTML = For
+            miP.innerHTML= Pre
+        }
+    </script>
+</body>
+</html>
