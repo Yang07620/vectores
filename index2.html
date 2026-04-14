@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        let colors = ["vermell", "blau", "verd"];
+
+        console.log(colors); // Mostra tot l'array
+        console.log(colors[0]); // vermell
+        console.log(colors[1]); // blau
+        console.log(colors[2]); // verd
+
+        //Objectiu: accedir a un element concret utilitzant el seu índex.
+
+        let notes = [6, 8, 5, 9];
+
+        console.log("Primera nota: " + notes[0]);
+        console.log("Última nota: " + notes[3]);
+        console.log("Tercera nota: " + notes[3])
+
+        //Objectiu: canviar un valor existent dins d’un array.
+
+        let notes2 = [6, 8, 5, 9];
+
+        notes2[2] = 7; // Canviem la tercera nota (índex 2)
+        console.log(notes2); // [6, 8, 7, 9]
+
+        //Objectiu: saber quants elements té l’array.
+
+        let alumnes = ["Laia", "Pau", "Marta", "Nil"];
+
+        console.log("Total alumnes: " + alumnes.length); // 4
+
+        //Objectiu: mostrar tots els elements d’un array amb un bucle.
+
+        let alumnes2 = ["Laia", "Pau", "Marta", "Nil"];
+
+        for (let i = 0; i < alumnes2.length; i = i + 1) {
+        console.log("Alumne " + i + ": " + alumnes2[i]);
+        }
+
+        //Objectiu: modificar la mida de l’array.
+
+        let tasques = ["HTML", "CSS"];
+
+        tasques.push("JavaScript"); // Afegeix al final
+        console.log(tasques); // ["HTML", "CSS", "JavaScript"]
+
+        tasques.pop(); // Treu l'últim element
+        console.log(tasques); // ["HTML", "CSS"]
+
+        // Arrays de dues dimensions (2D)
+
+        // Exemple bàsic
+
+        let taula = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+            ];
+
+        console.log(taula); // Mostra tota la taula
+        console.log(taula[0]); // Primera fila: [1, 2, 3]
+        console.log(taula[1][2]); // Fila 1, columna 2: 6
+
+        // Objectiu: llegir un valor concret d’una matriu.
+
+        let notesClasse = [
+                [7, 8, 6], // Alumne 1
+                [5, 9, 7], // Alumne 2
+                [10, 8, 9] // Alumne 3
+                ];
+
+        console.log("Nota alumne 2, examen 3: " + notesClasse[1][2]); // 7
+
+        // Objectiu: canviar una cel·la concreta d’un array 2D.
+
+        let notesClasse2 = [
+                [7, 8, 6],
+                [5, 9, 7],
+                [10, 8, 9]
+                ];
+
+        notesClasse2[0][1] = 10; // Canviem la fila 0, columna 1
+        console.log(notesClasse2);
+
+        // Recórrer un array 2D amb dos bucles
+
+        // Objectiu: mostrar tots els valors de la matriu.
+
+        let matriu = [
+            [1, 2, 3],
+            [4, 5, 6]
+            ];
+
+        for (let fila = 0; fila < matriu.length; fila = fila + 1) {
+        for (let columna = 0; columna < matriu[fila].length; columna = columna + 1) {
+            console.log("Valor [" + fila + "][" + columna + "] = " + matriu[fila][columna]);
+        }
+        }
+    </script>
+</body>
+</html>

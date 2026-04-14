@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicis</title>
+</head>
+<body>
+    <script>
+        // EXERCICI 1
+        let nuMero = [1, 2, 3, 4, 5]
+        console.log(nuMero[0], nuMero[nuMero.length - 1])
+
+        nuMero[2] = 10
+        console.log(nuMero)
+
+        // EXERCICI 2
+        let NomBre = ["MANZANA", "Hola", "ADIOS", "SALIR", "ORDENADOR"]
+
+        for (let i = 0;i<NomBre.length;i++) {
+            console.log("Paraula: " + i + ": " + NomBre[i])
+        }
+
+        // EXERCICI 3
+        let Buit = []
+
+        Buit.push("PARAULA 1", "PARAULA 2", "PARAULA 3")
+        console.log(Buit)
+
+        Buit.pop() //Treure un element final
+        console.log(Buit)
+
+        // EXERCICI 4
+        let MaTriu = [
+            [1, 2, 3],
+            [4, 5, 6]
+        ];
+
+        console.log(MaTriu[0][1]) //Fila 1 columna 2
+
+        MaTriu[1][2] = 10
+        console.log(MaTriu)
+
+        // EXERCICI 5
+       let matriu = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+
+        for (let fila = 0; fila < matriu.length; fila++) {
+            for (let columna = 0; columna < matriu[fila].length; columna++) {
+                console.log("VALOR [" + fila + "][" + columna + "] = " + matriu[fila][columna]);
+            }
+        }
+
+    </script>
+</body>
+</html>
